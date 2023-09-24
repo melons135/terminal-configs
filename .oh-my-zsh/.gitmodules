@@ -1,0 +1,3 @@
+[submodule "plugins/zsh-defer"]
+	path = plugins/zsh-defer
+	url = https://github.com/romkatv/zsh-defer.git

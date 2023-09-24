@@ -95,7 +95,7 @@ else
   export EDITOR='vi'
 fi
 
-neofetch 2>/dev/null
+neofetch --ascii $HOME/.config/neofetch/wizard-ascii 2>/dev/null
 
 # export MYIP=$(ip addr show tun0 2>/dev/null | grep -oP '(?<=inet\s)\d+(\.\d+){3}' --color=none)
 
