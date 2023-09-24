@@ -1,18 +1,20 @@
 #!/bin/bash
 
 # Get location of folder
-Location=$(find / -type d -name terminal-configs)
+Location=$(find /usr/share -type d -name terminal-configs)
 
+# todo
 # If there are multiple locations ask user for input for correct one
-if (( $($Locations | wc -l) > 1 ))
-then
-	echo $Locations
-	read -p "Please enter the line number of the correct directory listed above: "
-fi
+#if (( $($Locations | wc -l) > 1 ))
+#then
+#	echo $Locations
+#	read -p "Please enter the line number of the correct directory listed above: " index
+#
+#fi
 
-# fetch .ohmyzsh update from remote repo
-	# this is a submodle that has been forked so might need to figure that out too
+# Update submodules
+git pull --recures-submodules -C $Location
 
-# pull Spacevim update
-# pull update for this repo
-
+# link zsh-custom to .oh-my-zsh/custom
+rm -rf $Location/.oh-my-zsh/custom
+ln -s $Location/zsh-configs $Location/.oh-my-zsh/custom
