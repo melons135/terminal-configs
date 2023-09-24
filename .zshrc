@@ -1,7 +1,7 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source $ZSH/plugins/zsh-defer/zsh-defer.plugin.zsh
+source $ZSH/custom/plugins/zsh-defer/zsh-defer.plugin.zsh
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -9,9 +9,7 @@ source $ZSH/plugins/zsh-defer/zsh-defer.plugin.zsh
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="jonathan"
 ZSH_THEME="nathan"
-#ZSH_THEME="nathanDOT"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,9 +73,9 @@ HIST_STAMPS="yyyy/mm/dd"
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(git) # zsh-syntax-highlighting zsh-autosuggestions evalcache) # compleat)
-zsh-defer source $ZSH/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+zsh-defer source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 zsh-defer source $ZSH/plugins/zsh-interactive-cd/zsh-interactive-cd.zsh
-zsh-defer source $ZSH/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+zsh-defer source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 zsh-defer source $ZSH/oh-my-zsh.sh
 
 # User configuration
