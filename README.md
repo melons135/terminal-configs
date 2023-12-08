@@ -9,4 +9,5 @@ VX-Underground - https://vx-underground.org/samples.html
 Malpedia - https://malpedia.caad.fkie.fraunhofer.de/
 
 # ToDo
-A number of files exitied on windows will need dos2unix conversion to remove ^M symbol when loading
+- A number of files exitied on windows will need dos2unix conversion to remove ^M symbol when loading
+- if terminal theme doesn't load properly at first then source the theme file, i think its an issues with load order of .zshrc
