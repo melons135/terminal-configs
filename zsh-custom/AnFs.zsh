@@ -56,6 +56,9 @@ alias mux='pgrep -vx tmux > /dev/null && \
 
 command -v exa >/dev/null 2>&1 && { alias ls="exa" }
 
+# Organise process output
+alias ps='ps -faux'
+
 ## Functions
 #make a directory and move into it
 mk() {
