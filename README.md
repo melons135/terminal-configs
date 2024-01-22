@@ -11,3 +11,12 @@ Malpedia - https://malpedia.caad.fkie.fraunhofer.de/
 # ToDo
 - A number of files exitied on windows will need dos2unix conversion to remove ^M symbol when loading
 - if terminal theme doesn't load properly at first then source the theme file, i think its an issues with load order of .zshrc
+- add the following to mozilla:
+  - Extensions
+    - https://github.com/zdhenard42/SOC-Multitool - https://addons.mozilla.org/en-US/firefox/addon/soc-multi-tool/
+  -Bookmarks
+    - https://osint.sh/
+    - https://lobuhi.github.io/#
+    - https://threatbook.io/
+    - https://www.filescan.io/scan
+    - 
