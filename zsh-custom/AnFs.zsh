@@ -59,6 +59,9 @@ command -v exa >/dev/null 2>&1 && { alias ls="exa" }
 # Organise process output
 alias ps='ps -faux'
 
+# Cape execution with ruleset
+alias cape='capa -r /opt/capa-rules'
+
 ## Functions
 #make a directory and move into it
 mk() {
