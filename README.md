@@ -19,4 +19,4 @@ Malpedia - https://malpedia.caad.fkie.fraunhofer.de/
     - https://lobuhi.github.io/#
     - https://threatbook.io/
     - https://www.filescan.io/scan
-    - 
+    - https://opensourcesecurityindex.io/
