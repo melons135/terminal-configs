@@ -1,0 +1,14 @@
+{"timestamp":220,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"add-an-image-to-pdf-with-alt-text-rollout","branch":"control","experiment_type":"rollout"}}
+{"timestamp":236,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"backgroundupdate-enable-unelevated-installations-rollout-3-release","branch":"enabled","experiment_type":"rollout"}}
+{"timestamp":243,"category":"nimbus_events","name":"enrollment","extra":{"experiment_type":"rollout","experiment":"ech-roll-out","branch":"rollout"}}
+{"timestamp":247,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"extensions-migration-in-import-wizard-116-rollout","experiment_type":"rollout","branch":"control"}}
+{"timestamp":255,"category":"nimbus_events","name":"enrollment","extra":{"experiment_type":"rollout","experiment":"mozillaaccounts-toolbar-button-default-visibility-existing-user","branch":"treatment-a"}}
+{"timestamp":272,"category":"nimbus_events","name":"enrollment","extra":{"experiment_type":"rollout","experiment":"rollout-of-share-of-voice-for-sponsored-topsites","branch":"control"}}
+{"timestamp":278,"category":"nimbus_events","name":"enrollment","extra":{"experiment_type":"rollout","experiment":"upgrade-spotlight-rollout","branch":"treatment"}}
+{"timestamp":280,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"launch-firefox-on-os-restart-treatment-a-rollout","branch":"treatment-a","experiment_type":"rollout"}}
+{"timestamp":294,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"device-migration-q4-spotlights-remaining-population","branch":"treatment","experiment_type":"rollout"}}
+{"timestamp":315,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"firefox-desktop-long-term-holdback-validation-release","experiment_type":"nimbus","branch":"delivery"}}
+{"timestamp":333,"category":"nimbus_events","name":"enrollment","extra":{"experiment":"phc-rollout","branch":"rollout","experiment_type":"rollout"}}
+{"timestamp":359,"category":"nimbus_events","name":"enroll_failed","extra":{"experiment":"pocket-newtab-3rd-sponsored-tile-rollout","reason":"feature-conflict"}}
+{"timestamp":368,"category":"nimbus_events","name":"unenrollment","extra":{"reason":"recipe-not-seen","experiment":"serp-ad-telemetry-rollout","branch":"control"}}
+{"timestamp":151973,"category":"nimbus_events","name":"exposure","extra":{"branch":"treatment-a","feature_id":"windowsLaunchOnLogin","experiment":"launch-firefox-on-os-restart-treatment-a-rollout"}}
