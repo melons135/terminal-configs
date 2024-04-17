@@ -16,5 +16,4 @@ Location=$(find /usr/share -type d -name terminal-configs)
 git pull --recures-submodules -C $Location
 
 # link zsh-custom to .oh-my-zsh/custom
-rm -rf $Location/.oh-my-zsh/custom
-ln -s $Location/zsh-configs $Location/.oh-my-zsh/custom
+ln -s $Location/zsh-configs/* $Location/.oh-my-zsh/custom
