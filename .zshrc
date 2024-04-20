@@ -106,4 +106,3 @@ zsh-defer source $ZSH/custom/AnFs.zsh
 
 # nvai widgit
 zsh-defer eval "$(navi widget zsh)"
->>>>>>> 5a5cf11b0cfbfef643a276e2f89a0b3db2394854
