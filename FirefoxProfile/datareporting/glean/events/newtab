@@ -1,0 +1,12 @@
+{"timestamp":266088,"category":"newtab","name":"opened","extra":{"newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","source":"about:newtab"}}
+{"timestamp":266107,"category":"topsites","name":"impression","extra":{"newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","is_sponsored":"false","position":"3"}}
+{"timestamp":266107,"category":"topsites","name":"impression","extra":{"position":"7","newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","is_sponsored":"false"}}
+{"timestamp":266107,"category":"pocket","name":"impression","extra":{"is_sponsored":"false","recommendation_id":"6a830343-6833-4025-bd94-3ecb0c954664","newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","position":"0","tile_id":"176041822196769"}}
+{"timestamp":266108,"category":"topsites","name":"impression","extra":{"newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","is_sponsored":"false","position":"2"}}
+{"timestamp":266109,"category":"pocket","name":"impression","extra":{"newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","tile_id":"525854809","is_sponsored":"true","position":"1"}}
+{"timestamp":266109,"category":"topsites","name":"impression","extra":{"position":"6","is_sponsored":"false","newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}"}}
+{"timestamp":266109,"category":"topsites","name":"impression","extra":{"tile_id":"75055","advertiser_name":"sephora","position":"1","is_sponsored":"true","newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}"}}
+{"timestamp":266109,"category":"topsites","name":"impression","extra":{"is_sponsored":"false","position":"5","newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}"}}
+{"timestamp":266109,"category":"topsites","name":"impression","extra":{"newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","tile_id":"74357","is_sponsored":"true","advertiser_name":"amazon","position":"0"}}
+{"timestamp":266110,"category":"topsites","name":"impression","extra":{"is_sponsored":"false","newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","position":"4"}}
+{"timestamp":266110,"category":"pocket","name":"impression","extra":{"newtab_visit_id":"{310aa4e7-8a68-4fb8-9bd9-f8470c62f62f}","position":"2","is_sponsored":"false","tile_id":"2443366495276631","recommendation_id":"63b5a0cd-b564-4c1d-87b1-f3c9b6c0ef7c"}}
