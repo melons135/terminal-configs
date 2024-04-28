@@ -75,9 +75,9 @@ HIST_STAMPS="yyyy/mm/dd"
 # Add wisely, as too many plugins slow down shell startup.
 
 plugins=(git) # zsh-syntax-highlighting zsh-autosuggestions evalcache) # compleat)
-zsh-defer source $ZSH/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-zsh-defer source $ZSH/plugins/zsh-interactive-cd/zsh-interactive-cd.zsh
-zsh-defer source $ZSH/custom/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+zsh-defer source $ZSH_CUSTOM/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+zsh-defer source $ZSH_CUSTOM/plugins/zsh-interactive-cd/zsh-interactive-cd.zsh
+zsh-defer source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -106,5 +106,5 @@ zsh-defer source $ZSH/custom/AnFs.zsh
 # when starting terminal. For speeding up your shell, the information that matters the most is the self/percent column
 #zmodload zsh/zprof
 
-# nvai widgit
+# navi widgit
 zsh-defer eval "$(navi widget zsh)"
