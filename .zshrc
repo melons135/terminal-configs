@@ -1,7 +1,11 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
-source $ZSH/custom/plugins/zsh-defer/zsh-defer.plugin.zsh
+# Would you like to use another custom folder than $ZSH/custom?
+ZSH_CUSTOM=/usr/share/terminal-configs/zsh-custom
+
+source $ZSH_CUSTOM/plugins/zsh-defer/zsh-defer.plugin.zsh
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -63,8 +67,6 @@ COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
 # see 'man strftime' for details.
 HIST_STAMPS="yyyy/mm/dd"
 
-# Would you like to use another custom folder than $ZSH/custom?
-ZSH_CUSTOM=/usr/share/terminal-configs/zsh-custom
 
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
