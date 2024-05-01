@@ -82,8 +82,14 @@ server(){
 
 #fast scan and output
 ## OLD: sudo docker run -it -v $PWD:/nmap --rm --name rustscan rustscan/rustscan:latest rustscan $1 -- -A -oN /nmap/nmap.txt -oX /nmap/nmap.xml && searchsploit -v --nmap nmap.xml --exclude="/dos/" | tee "searchsploit.txt" && rm nmap.xml
+## OLD2: nmap -Pn $1 -oN nmap/quick-$1.txt && nmap -Pn -p- -T4 -A -oN nmap/full-$1.txt -oX nmap/nmap.xml $1 && searchsploit -v --nmap nmap/nmap.xml --exclude="/dos/" | tee "nmap/searchsploit.txt" && rm nmap/nmap.xml
 function scan(){
-	mkdir nmap ; nmap -Pn $1 -oN nmap/quick-$1.txt && nmap -Pn -p- -T4 -A -oN nmap/full-$1.txt -oX nmap/nmap.xml $1 && searchsploit -v --nmap nmap/nmap.xml --exclude="/dos/" | tee "nmap/searchsploit.txt" && rm nmap/nmap.xml
+	mkdir nmap || true
+	nmap -Pn $1 -oN nmap/quick-$1.txt
+	ports=$(nmap -Pn -p- -T4 $1 | grep '^[0-9]' | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
+	nmap -p$ports -sC -sV -oN nmap/full-$1.txt -oX nmap/nmap.xml $1
+	searchsploit -v --nmap nmap/nmap.xml --exclude="/dos/i" | tee "nmap/searchsploit.txt"
+	rm nmap/nmap.xml
 }
 
 # SMBeagle
