@@ -16,8 +16,8 @@ alias viewtar="tar -tvf $@"
 #reload zsh
 alias reload='source ~/.zshrc'
 
-#rustscan in docker
-alias rustscan='sudo docker run -it --rm --name rustscan cmnatic/rustscan:debian-buster rustscan'
+#rustscan in docker - This is not good, its needs a -- -A for nmap commands but only works if -a is used to specify the address
+alias rustscan='sudo docker run -it --rm --name rustscan rustscan/rustscan:latest -b 1500 -a'
 
 #Spin-up docker
 alias dockerit='sudo docker run -it --rm -v $PWD/$2:/ --entrypoint=/bin/bash $2'
@@ -81,8 +81,9 @@ server(){
 }
 
 #fast scan and output
+## OLD: sudo docker run -it -v $PWD:/nmap --rm --name rustscan rustscan/rustscan:latest rustscan $1 -- -A -oN /nmap/nmap.txt -oX /nmap/nmap.xml && searchsploit -v --nmap nmap.xml --exclude="/dos/" | tee "searchsploit.txt" && rm nmap.xml
 function scan(){
-	sudo docker run -it -v $PWD:/nmap --rm --name rustscan cmnatic/rustscan:debian-buster rustscan $1 -- -A -oN /nmap/nmap.txt -oX /nmap/nmap.xml && searchsploit -v --nmap nmap.xml --exclude="/dos/" | tee "searchsploit.txt" && rm nmap.xml
+	mkdir nmap ; nmap -Pn $1 -oN nmap/quick-$1.txt && nmap -Pn -p- -T4 -A -oN nmap/full-$1.txt -oX nmap/nmap.xml $1 && searchsploit -v --nmap nmap/nmap.xml --exclude="/dos/" | tee "nmap/searchsploit.txt" && rm nmap/nmap.xml
 }
 
 # SMBeagle
