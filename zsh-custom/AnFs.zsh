@@ -39,13 +39,13 @@ alias ip="ip -c"
 alias ips="ip -c=never -brie a"
 
 # docker here
-alias dockerit='sudo docker run -it --rm -v $PWD/$2:/ $2'
+alias dockerit='sudo docker run -it --rm -v $(pwd):/host $2'
 
 # Bloodhound
 alias bloodhound='xhost + && sudo docker run -it --rm -v /tmp/.X11-unix/:/tmp/.X11-unix -e DISPLAY=$DISPLAY --network host --name bloodhound bannsec/bloodhound'
 
 # Batcat alias
-command -v bat >/dev/null 2>&1 && { alias cat="bat" }
+alias bat="batcat"
 
 # Quick resurect tmux session
 alias mux='pgrep -vx tmux > /dev/null && \
@@ -53,8 +53,6 @@ alias mux='pgrep -vx tmux > /dev/null && \
 		tmux run-shell ~/.tmux/plugins/tmux-resurrect/scripts/restore.sh && \
 		tmux kill-session -t delete-me && \
 		tmux attach || tmux attach'
-
-command -v exa >/dev/null 2>&1 && { alias ls="exa" }
 
 # Organise process output
 alias ps='ps -faux'
