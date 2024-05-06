@@ -20,7 +20,7 @@ alias reload='source ~/.zshrc'
 alias rustscan='sudo docker run -it --rm --name rustscan rustscan/rustscan:latest -b 1500 -a'
 
 #Spin-up docker
-alias dockerit='sudo docker run -it --rm -v $PWD/$2:/ --entrypoint=/bin/bash $2'
+alias dockerit='sudo docker run -it --rm -v $PWD:/host --entrypoint=/bin/bash $2'
 
 #torify proxy
 alias hide='if [ `systemctl is-active` = 'inactive'] ; do systemctl start tor ;fi ; source torsocks on'
