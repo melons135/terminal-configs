@@ -60,6 +60,9 @@ alias ps='ps -faux'
 # Cape execution with ruleset
 alias cape='capa -r /opt/capa-rules'
 
+# Back to previous directory
+alias back=popd
+
 ## Functions
 #make a directory and move into it
 mk() {
@@ -75,7 +78,7 @@ server(){
 	xclip -selection clipboard $ADDRESS/$1
 	echo "The server is being hosted on $ADDRESS, the files in this directory are:"
 	ls $PWD
-	sudo python3 -m http.server $PORT &>/dev/null
+	python3 -m http.server $PORT &>/dev/null
 }
 
 #fast scan and output
@@ -84,6 +87,7 @@ server(){
 function scan(){
 	mkdir nmap || true
 	nmap -Pn $1 -oN nmap/quick-$1.txt
+	sudo nmap -Pn -sU -oN nmap/UDP-$1.txt
 	ports=$(nmap -Pn -p- -T4 $1 | grep '^[0-9]' | cut -d '/' -f 1 | tr '\n' ',' | sed s/,$//)
 	nmap -p$ports -sC -sV -oN nmap/full-$1.txt -oX nmap/nmap.xml $1
 	searchsploit -v --nmap nmap/nmap.xml --exclude="/dos/i" | tee "nmap/searchsploit.txt"
