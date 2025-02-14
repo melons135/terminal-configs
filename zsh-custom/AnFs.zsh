@@ -16,11 +16,21 @@ alias viewtar="tar -tvf $@"
 #reload zsh
 alias reload='source ~/.zshrc'
 
+#Dockers
 #rustscan in docker - This is not good, its needs a -- -A for nmap commands but only works if -a is used to specify the address
 alias rustscan='sudo docker run -it --rm --name rustscan rustscan/rustscan:latest -b 1500 -a'
 
 #Spin-up docker
 alias dockerit='sudo docker run -it --rm -v $PWD:/host --entrypoint=/bin/bash $2'
+
+#Python2 - install requests and packages with `sh -c "pip install requests && python script.py ...` in place of final `python`
+alias python2='docker run -it -v $(pwd):/host -w /host python:2 python'
+
+# docker here
+alias dockerit='docker run -it --rm -v $(pwd):/host $2'
+
+# Bloodhound
+alias bloodhound='xhost + && sudo docker run -it --rm -v /tmp/.X11-unix/:/tmp/.X11-unix -e DISPLAY=$DISPLAY --network host --name bloodhound bannsec/bloodhound'
 
 #torify proxy
 alias hide='if [ `systemctl is-active` = 'inactive'] ; do systemctl start tor ;fi ; source torsocks on'
@@ -37,12 +47,6 @@ alias ip="ip -c"
 
 #list all IPs breif
 alias ips="ip -c=never -brie a"
-
-# docker here
-alias dockerit='sudo docker run -it --rm -v $(pwd):/host $2'
-
-# Bloodhound
-alias bloodhound='xhost + && sudo docker run -it --rm -v /tmp/.X11-unix/:/tmp/.X11-unix -e DISPLAY=$DISPLAY --network host --name bloodhound bannsec/bloodhound'
 
 # Batcat alias
 alias bat="batcat"
