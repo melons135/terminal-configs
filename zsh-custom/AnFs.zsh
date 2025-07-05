@@ -132,7 +132,7 @@ compare(){
 OS=$(grep ^NAME= /etc/os-release | awk -F '"' '{print $2}')
 update(){
 	case $OS in
-		'Ubuntu' | 'Kali Linux')
+		'Ubuntu' | 'Kali GNU/Linux')
 			sudo apt update && sudo apt upgrade
 			;;
 		'Arch Linux')
