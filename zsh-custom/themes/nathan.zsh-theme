@@ -37,11 +37,11 @@ autoload -U add-zsh-hook
 add-zsh-hook precmd  theme_precmd
 add-zsh-hook preexec theme_preexec
 
-# Get values for prompt IP
+# Get values for prompt IP - consider using `ip -brie a`
 if [[ -d /sys/class/net/tun0 ]]
 then
   # print tun0 ip and netmask
-  PROMPTIP=$(ip -c=never a show tun0 | grep 'inet ' | awk '{ sub(/.*inet /,""); sub(/ .*/, ""); printf $1":tun0" }')
+  PROMPTIP=$(ip -c=never a show tun0 | grep 'inet ' | awk '{ sub(/.*inet /,""); sub(/\/.*/, ""); printf $1":tun0"}')
 else
   # print ip for outbound connections
   PROMPTIP=$(ip -c=never route get 8.8.8.8 2>/dev/null | awk 'NR==1{ sub(/.*dev /,""); sub(/ uid.*/, ""); printf $3":"$1}')
