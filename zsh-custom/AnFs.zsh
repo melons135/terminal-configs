@@ -46,7 +46,7 @@ alias listening='ss -nlt'
 alias ip="ip -c"
 
 #list all IPs breif
-alias ips="ip -c=never -brie a"
+alias ips="ip -brie a"
 
 # Batcat alias
 alias bat="batcat"
