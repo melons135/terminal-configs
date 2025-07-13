@@ -77,9 +77,18 @@ mk() {
 #start python server
 server(){
 	PORT=$(($RANDOM+1024))
-	echo 'Server address has been copied to your clipboard, if a file was listed after this has also been copied. A file can be added as an argument, this will be also added to URI that has been coppied'
-	ADDRESS="http://$(hostname -I | awk '{print $1}'):$PORT"
+	if [[ -d /sys/class/net/tun0 ]]
+	then
+	  # print tun0 ip and netmask
+	  HOSTIP=$(ip -c=never a show tun0 | grep 'inet ' | awk '{ sub(/.*inet /,""); sub(/\/.*/, ""); print }')
+	else
+	  # print ip for outbound connections
+	  HOSTIP=$(ip -c=never route get 8.8.8.8 2>/dev/null | awk 'NR==1{ sub(/.*dev /,""); sub(/ uid.*/, ""); printf $3}')
+	fi
+	ADDRESS="http://$HOSTIP:$PORT"
 	xclip -selection clipboard $ADDRESS/$1
+	echo 'Server address has been copied to your clipboard.'
+	echo 'A file can be added as an argument, this will be also added to URI that has been copied'
 	echo "The server is being hosted on $ADDRESS, the files in this directory are:"
 	ls $PWD
 	python3 -m http.server $PORT &>/dev/null
